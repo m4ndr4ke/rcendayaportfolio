@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rommel C. Endaya | Portfolio</title>
+
+    <!--Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JS Link-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!--quotable quotes-->
+    <script>
+      //code thanks to Asaolu Elijah!
+      const url = 'https://api.quotable.io/random';
+
+      function generateQuote() {
+        fetch(url)
+          .then(function (data) {
+            return data.json();
+          })
+          .then(function (data) {
+            document.getElementById('quote').innerHTML =
+              '"' + data.content + '"';
+            document.getElementById('author').innerHTML = data.author;
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+      // Repeat generateQuote() every 60 seconds
+      //Note - 60000 milliseconds = 60
+
+      //setInterval(generateQuote(), 60000);
+
+      generateQuote();
+    </script>
+
+
+    <!--ISP details-->
+    <script>
+      
+      const apiurl = 'https://api.techniknews.net/ipgeo/';
+
+      function generateispdetail() {
+        fetch(apiurl)
+          .then(function (ispdata) {
+            return ispdata.json();
+          })
+          .then(function (ispdata) {
+            document.getElementById('country').innerHTML =
+              'Country: ' + ispdata.country ;
+            document.getElementById('region').innerHTML = 'Region : ' + ispdata.regionName;
+            document.getElementById('city').innerHTML = 'City   : ' + ispdata.city;
+            document.getElementById('zipcode').innerHTML = 'Zip Code : ' + ispdata.zip;
+            document.getElementById('timezone').innerHTML = 'Time Zone   : ' + ispdata.timezone;
+            document.getElementById('isp').innerHTML = 'ISP   : ' + ispdata.isp;
+            document.getElementById('ipaddress').innerHTML = 'IP address   : ' + ispdata.ip;
+            document.getElementById('reverse').innerHTML = 'reverse IP   : ' + ispdata.reverse;
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+
+      generateispdetail();
+    </script>
+
+    <!-- for page visits
+   <script>
+    function cb(response) {
+        document.getElementById('visits').innerText = 'My page has been visited ' + response.value + ' times';       }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/geegeenoreh.blogspot.com/visits?callback=cb"></script>
+
+-->
+
+
+
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Racing+Sans+One&family=Roboto&family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+
+  <body >
+    <!--  -->
+    <!-- div creates a wrapper/container for our layout -->
+    <!-- class is an attribute to name our div -->
+    <div class="container">
+      <header class="text-center mx-auto">
+        <!-- image -->
+        <div>
+          <img src="images/rceeyes.jpg" class="img-fluid mt-5" id="profile" />
+        </div>
+        <div><h1 class="display-4">ROMMEL C. ENDAYA</h1></div>
+
+        <div class="justify-content-center blockquote fs-6" id="quote">
+          Don't forget: life is a race, if you don't run fast, you'll get
+          trampled
+        </div>
+        <div class="justify-content-center blockquote-footer" id="author">
+          Anonymous 🎭
+        </div>
+      </header>
+
+      <!-- A grey horizontal navbar that becomes vertical on small screens -->
+      <nav
+        class="navbar navbar-expand-sm justify-content-center text-center mx-auto p-3"
+        id="navig"
+      >
+        <div>
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page"  href="#">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#personalproj">Personal Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="justify-content-center row shadow-lg">
+        <div
+          class="col-sm-8 bg-gradient border border-2 border-info-subtle rounded p-3"
+        >
+          <section>
+            <h5>About Me</h5>
+            
+            <p>
+              Hello and thank you for visiting my site. I am a Computer Science
+              graduate from the Philippines with 26 years of experience in the
+              I.T. field working on different areas: coding, hardware and
+              software technical support, data analysis and networking.
+            </p>
+            <p>
+              I am currently learning web development using HTML,CSS and
+              Javascript with the intention of progressing to full-stack web
+              development.
+            </p>
+            <p>
+              When not in the office, I spend my time playing guitar, listening
+              to music, watching TV and playing video games.
+            </p>
+            <p>
+              This site is a work in progress. I will try improve upon it as I
+              learn new things.
+            </p>
+            <em><a href="#">back to top</a></em>
+          </section>
+          <hr  />
+          <section id="education">
+            <div>
+              <h5 >Education</h5>
+              
+              Elementary and Highschool,
+              <a href="https://www.josephians.edu.ph/" target="_blank">
+                St. Joseph's Academy, Las Piñas
+              </a>
+              <br />
+              Bachelor of Science in Math,
+              <a href="https://www.ust.edu.ph/" target="_blank">
+                University of Sto. Tomas, Manila
+              </a>
+              <br />
+              Bachelor of Science in Computer Science,
+              <a href="https://www.ama.edu.ph/" target="_blank">
+                AMACC, Makati
+              </a>
+              <br /><br />
+
+              <h6>Post Graduate Courses</h6>
+              <ul class=>
+                <li>
+                  <a
+                    href="https://coursera.org/share/84c3fcb9a5a0469ce7f2a1d3359917c9"
+                    target="_blank"
+                    >Building Web Applications in PHP</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://coursera.org/share/e4677e1b75a466d928799dfb35bec8b7"
+                    target="_blank"
+                    >Building Database Applications in PHP</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://coursera.org/share/2c4edbd48385c0cae30343c6ccc02d74"
+                    target="_blank"
+                    >Introduction to Structured Query Language (SQL)</a
+                  >
+                </li>
+              </ul>
+
+              <h6>Other short courses taken</h6>
+              <ul>
+                <li>
+                  <a href="images/CNCTCRCE.png" target="_blank"
+                    >PC Assembly, Hardware and Software Troubleshooting and Repair,
+                  </a>  
+                  <a href="https://www.cnctc.edu.ph/" target="_blank"
+                    >--- CNCTC, Inc.
+                  </a>
+                </li>
+              </ul>
+              
+
+              <h6>Seminars and Bootcamps Attended</h6>
+              <ul>
+                <li>
+                  <a href="docfiles/FWDP.pdf" target="_blank"
+                    >Filipino Web Development Peers Community Day, July 30, 2023
+                  </a>
+                </li>
+                <li>  
+                  <a href="docfiles/RCEFCB.pdf" target="_blank"
+                    >ZUITT Free Coding Bootcamp: Basic Web Development Workshop, September 9, 2023
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <em><a href="#">back to top</a></em>
+          </section>
+          <hr />
+
+          <section id="personalproj">
+            <h5>Personal Projects</h5>
+            
+            <p>
+              This section seriously needs content.
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <em><a href="#">back to top</a></em>
+          </section>
+
+        </div>
+        <div
+          class="col-sm-4 bg-gradient border border-2 border-info-subtle rounded p-3"
+        >
+          
+          <section id="visitorisp">
+            <h5>Hello Visitor</h5>
+            
+          <p id="visits"></p> 
+               
+            <p>
+              Your Internet Service Provider details are as follows:
+            </p>
+            <span id="country">
+              Country:
+            </span>
+            <br>
+            <span id="region">
+              Region : 
+            </span>
+            <br>
+            <span id="city">
+              City   :
+            </span>
+            <br>
+            <span id="zipcode">
+              Zip Code   :
+            </span>
+            <br>
+            <span id="timezone">
+              Time Zone   :
+            </span>
+            <br>
+            <span id="isp">
+              ISP   :
+            </span>
+            <br>
+            <span id="ipaddress">
+              IP address   :
+            </span>
+            <br>
+            <span id="reverse">
+              reverse IP   :
+            </span>
+            <br>
+            <br>
+            <em><a href="#">back to top</a></em>
+          </section>
+        
+        </div>
+      </main>
+    <br><br>
+      <footer
+        class="navbar navbar-expand-sm justify-content-center text-center mx-auto p-3 bg-primary text-white rounded-top border border-2 border-info shadow-lg"
+        id="footer"
+      >
+        <div>
+          © 2023 Copyright:
+          <a class="text-white" href="mailto:rommelsaiyan@yahoo.com">ROMMEL C. ENDAYA</a><br>
+          email: rommelsaiyan@yahoo.com
+          <!-- Links -->
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page"  href="#">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#personalproj">Personal Projects</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+
+    <script>
+  
+      var visitCount = localStorage.getItem("page_view");
+      var counterContainer = document.getElementById('visits');
+    
+      function checkvisit() {
+        // Check if page_view entry is present
+        if (visitCount) {
+        visitCount = Number(visitCount) + 1;
+        
+          localStorage.setItem("page_view", visitCount);
+          
+        } else {
+          visitCount = 1;
+          localStorage.setItem("page_view", 1);
+          
+        }  
+        counterContainer.innerText = 'You visited my page ' + visitCount + ' times.'; 
+      
+      }
+      checkvisit(); 
+    </script>
+  </body>
+</html>

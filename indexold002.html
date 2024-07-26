@@ -5,21 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rommel C. Endaya | Portfolio</title>
 
-    <!--Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-
-    <!-- Bootstrap JS Link-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-
     <!--quotable quotes-->
     <script>
       //code thanks to Asaolu Elijah!
@@ -81,15 +66,6 @@
       generateispdetail();
     </script>
 
-    <!-- for page visits
-   <script>
-    function cb(response) {
-        document.getElementById('visits').innerText = 'My page has been visited ' + response.value + ' times';       }
-    </script>
-    <script async src="https://api.countapi.xyz/hit/geegeenoreh.blogspot.com/visits?callback=cb"></script>
-
--->
-
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,6 +78,10 @@
   </head>
 
   <body>
+    <div class="bodywrapper">
+      <header class="mainheader"></header>
+    </div>
+
     <script>
       var visitCount = localStorage.getItem('page_view');
       var counterContainer = document.getElementById('visits');

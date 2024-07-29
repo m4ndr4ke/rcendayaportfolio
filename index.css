@@ -1,0 +1,42 @@
+.bodywrapper {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.logopic {
+  display: grid;
+  place-items: center;
+}
+
+#profile {
+  height: 15em;
+  width: 15em;
+  border-radius: 50%;
+}
+
+.namebanner {
+  display: grid;
+  place-items: center;
+}
+
+.headerquote {
+  display: grid;
+  place-items: center;
+}
+
+.headerquoteauthor {
+  display: grid;
+  place-items: center;
+}
+
+.mainnavibaritems {
+  list-style-type: none;
+  text-align: center;
+}
+
+.mainnavibaritemslist {
+  display: inline-block;
+
+  padding: 1rem;
+}

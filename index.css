@@ -1,12 +1,14 @@
 .bodywrapper {
-  padding: 2rem;
+  padding: auto;
   display: grid;
   grid-template-columns: 1fr;
+  gap: 5px;
 }
 
 .logopic {
   display: grid;
   place-items: center;
+  border: 1px solid green;
 }
 
 #profile {
@@ -16,27 +18,66 @@
 }
 
 .namebanner {
+  padding: 1em;
   display: grid;
-  place-items: center;
+  /*place-items: center;*/
+
+  border: 1px solid green;
+}
+
+.thename {
+  margin: auto;
+  text-align: center;
 }
 
 .headerquote {
   display: grid;
   place-items: center;
+  border: 1px solid green;
+  padding: 0.5em;
+  text-align: center;
 }
 
 .headerquoteauthor {
   display: grid;
   place-items: center;
+  border: 1px solid green;
+  padding: 0.25em;
 }
 
 .mainnavibaritems {
   list-style-type: none;
-  text-align: center;
+  /*text-align: center;*/
+
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  white-space: nowrap;
+  /*align-content: center;*/
+  border: 1px solid green;
 }
 
 .mainnavibaritemslist {
-  display: inline-block;
+  /*display: inline-block;*/
 
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 1fr;*/
+  text-align: center;
   padding: 1rem;
+  border: 1px solid green;
+}
+
+.aboutmeeducation {
+  padding: 1rem;
+  border: 1px solid green;
+}
+
+.projectsection {
+  padding: 1rem;
+  border: 1px solid green;
+}
+
+.footerclass {
+  padding: 1rem;
+  border: 1px solid green;
 }

@@ -3,12 +3,14 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 5px;
+  font-family: 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
 }
 
 .logopic {
   display: grid;
   place-items: center;
   border: 1px solid green;
+  padding: 2em;
 }
 
 #profile {

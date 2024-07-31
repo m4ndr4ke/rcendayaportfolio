@@ -1,9 +1,27 @@
 .bodywrapper {
-  padding: auto;
+  /*padding: auto;*/
   display: grid;
+  /*grid-template-columns: fit-content(100%);*/
+
   grid-template-columns: 1fr;
-  gap: 5px;
-  font-family: 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+  /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+
+  /*gap: 5px;*/
+  font-family: 'Raleway', 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+
+  /*width: 100vw;*/
+  width: 100%;
+
+  overflow-x: hidden;
+}
+
+.mainheader {
+  /*display: grid;*/
+  grid-column: 1 / span 2;
+
+  /*can use if start and end columns varies*/
+  /*grid-column: 1 / -1;*/
+  /*height: max-content;*/
 }
 
 .logopic {
@@ -21,8 +39,7 @@
 
 .namebanner {
   padding: 1em;
-  display: grid;
-  /*place-items: center;*/
+  /*display: grid;*/
 
   border: 1px solid green;
 }
@@ -33,7 +50,7 @@
 }
 
 .headerquote {
-  display: grid;
+  /*display: grid;*/
   place-items: center;
   border: 1px solid green;
   padding: 0.5em;
@@ -41,10 +58,17 @@
 }
 
 .headerquoteauthor {
-  display: grid;
+  /*display: grid;*/
   place-items: center;
   border: 1px solid green;
   padding: 0.25em;
+  text-align: center;
+}
+
+.mainnavibar {
+  /*display: grid;*/
+  grid-column: 1 / span 2;
+  /*height: max-content;*/
 }
 
 .mainnavibaritems {
@@ -69,6 +93,11 @@
   border: 1px solid green;
 }
 
+.contentmain {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .aboutmeeducation {
   padding: 1rem;
   border: 1px solid green;
@@ -82,4 +111,5 @@
 .footerclass {
   padding: 1rem;
   border: 1px solid green;
+  grid-column: 1 / span 2;
 }

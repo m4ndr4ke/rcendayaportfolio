@@ -5,6 +5,7 @@
 
   grid-template-columns: 1fr;
   /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+  grid-template-rows: auto auto auto auto;
 
   /*gap: 5px;*/
   font-family: 'Raleway', 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
@@ -13,6 +14,25 @@
   width: 100%;
 
   overflow-x: hidden;
+
+  padding: 2rem 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(0, 0, 238);
+}
+
+.outsideul {
+  padding: 0;
+}
+
+.outsidelist {
+  margin-bottom: 0.5rem;
+  list-style-type: none;
 }
 
 .mainheader {
@@ -28,7 +48,7 @@
   display: grid;
   place-items: center;
   border: 1px solid green;
-  padding: 2em;
+  padding: 1em;
 }
 
 #profile {
@@ -42,6 +62,7 @@
   /*display: grid;*/
 
   border: 1px solid green;
+  font-size: 1.15rem;
 }
 
 .thename {
@@ -89,8 +110,10 @@
   /*display: grid;
   grid-template-columns: 1fr 1fr 1fr;*/
   text-align: center;
-  padding: 1rem;
+  padding: 1vw;
   border: 1px solid green;
+
+  font-size: 1.15rem;
 }
 
 .contentmain {
@@ -112,4 +135,32 @@
   padding: 1rem;
   border: 1px solid green;
   grid-column: 1 / span 2;
+}
+
+/* For desktop: */
+/*
+@media only screen and (min-width: 768px) {
+  
+}
+*/
+
+/* For tablets: */
+@media (width <= 820px) {
+  .bodywrapper {
+    padding: 0 0;
+  }
+}
+
+/* For cellphones: */
+@media (width <= 430px) {
+  .contentmain {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media (width <= 359px) {
+  .bodywrapper {
+    background-color: aqua;
+  }
 }

@@ -16,6 +16,8 @@
   overflow-x: hidden;
 
   padding: 2rem 5rem;
+
+  /*background-color: cornsilk;*/
 }
 
 a {
@@ -137,13 +139,6 @@ a:visited {
   grid-column: 1 / span 2;
 }
 
-/* For desktop: */
-/*
-@media only screen and (min-width: 768px) {
-  
-}
-*/
-
 /* For tablets: */
 @media (width <= 820px) {
   .bodywrapper {
@@ -159,8 +154,11 @@ a:visited {
   }
 }
 
-@media (width <= 359px) {
+/*
+@media (max-width: 359px) {
   .bodywrapper {
     background-color: aqua;
+    width: 360px;
   }
 }
+*/

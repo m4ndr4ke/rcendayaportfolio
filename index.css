@@ -17,7 +17,7 @@
 
   padding: 2rem 5rem;
 
-  /*background-color: cornsilk;*/
+  background-color: greenyellow;
 }
 
 a {
@@ -44,26 +44,35 @@ a:visited {
   /*can use if start and end columns varies*/
   /*grid-column: 1 / -1;*/
   /*height: max-content;*/
+
+  background-color: oldlace;
+
+  border: 0.25rem solid black;
+  border-radius: 25px;
 }
 
 .logopic {
   display: grid;
   place-items: center;
-  border: 1px solid green;
-  padding: 1em;
+
+  /*border: 1px solid green;*/
+
+  padding: 1.15em;
 }
 
 #profile {
   height: 15em;
   width: 15em;
   border-radius: 50%;
+  border: 0.15rem solid black;
 }
 
 .namebanner {
   padding: 1em;
   /*display: grid;*/
 
-  border: 1px solid green;
+  /*border: 1px solid green;*/
+
   font-size: 1.15rem;
 }
 
@@ -75,16 +84,22 @@ a:visited {
 .headerquote {
   /*display: grid;*/
   place-items: center;
-  border: 1px solid green;
-  padding: 0.5em;
+
+  /*border: 1px solid green;*/
+
+  padding-top: 0.75em;
+  padding-bottom: 0.25em;
   text-align: center;
 }
 
 .headerquoteauthor {
   /*display: grid;*/
   place-items: center;
-  border: 1px solid green;
-  padding: 0.25em;
+
+  /*border: 1px solid green;*/
+
+  padding-top: 0.1em;
+  padding-bottom: 0.75em;
   text-align: center;
 }
 
@@ -103,7 +118,20 @@ a:visited {
   grid-template-columns: 1fr 1fr 1fr;
   white-space: nowrap;
   /*align-content: center;*/
-  border: 1px solid green;
+
+  /*border: 1px solid green;*/
+  /*background-color: powderblue;*/
+
+  /*background-color: oldlace;*/
+
+  /*border: 0.25rem solid black;*/
+  /*border-radius: 25px;*/
+
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mainnavibaritemslist {
@@ -113,30 +141,52 @@ a:visited {
   grid-template-columns: 1fr 1fr 1fr;*/
   text-align: center;
   padding: 1vw;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 
   font-size: 1.15rem;
+
+  background-color: oldlace;
+
+  border: 0.2rem solid black;
+  border-radius: 15px;
 }
 
 .contentmain {
   display: grid;
   grid-template-columns: auto auto;
+
+  margin-bottom: 1em;
+
+  /*background-color: powderblue;*/
 }
 
 .aboutmeeducation {
   padding: 1rem;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
+
+  background-color: oldlace;
+  border: 0.2rem solid black;
+  border-radius: 15px;
 }
 
 .projectsection {
   padding: 1rem;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
+
+  background-color: oldlace;
+  border: 0.2rem solid black;
+  border-radius: 15px;
 }
 
 .footerclass {
   padding: 1rem;
   border: 1px solid green;
   grid-column: 1 / span 2;
+
+  /*background-color: powderblue;*/
+  background-color: oldlace;
+  border: 0.2rem solid black;
+  border-radius: 15px;
 }
 
 /* For tablets: */

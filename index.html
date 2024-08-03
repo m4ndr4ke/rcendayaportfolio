@@ -43,7 +43,7 @@
         document.getElementById('quote').innerHTML =
           '"' + data.slip.advice + '"';
         document.getElementById('author').innerHTML =
-          'random quote generator api';
+          '--random quote generator api';
       }
 
       getapi(api_url);
@@ -127,15 +127,17 @@
 
       <nav class="mainnavibar">
         <ul class="mainnavibaritems">
-          <li class="mainnavibaritemslist">
-            <a aria-current="page" href="#">ABOUT ME</a>
-          </li>
-          <li class="mainnavibaritemslist">
-            <a href="#education">EDUCATION</a>
-          </li>
-          <li class="mainnavibaritemslist">
-            <a href="#personalproj">PROGRAMS</a>
-          </li>
+          <a aria-current="page" href="#">
+            <li class="mainnavibaritemslist">ABOUT ME</li>
+          </a>
+
+          <a href="#education">
+            <li class="mainnavibaritemslist">EDUCATION</li>
+          </a>
+
+          <a href="#personalproj">
+            <li class="mainnavibaritemslist">PROGRAMS</li>
+          </a>
         </ul>
       </nav>
 
@@ -195,11 +197,28 @@
             <ul class="outsideul">
               <li class="outsidelist">
                 <a
+                  href="https://codeinplace.stanford.edu/cip4/certificate/ya1y0b"
+                  target="_blank"
+                  >Code in Place Introduction to Programming using Python</a
+                >
+              </li>
+
+              <li class="outsidelist">
+                <a
+                  href="https://coursera.org/share/3dd3edd6f23bee58592a84ac2d762798"
+                  target="_blank"
+                  >The Bits and Bytes of Computer Networking</a
+                >
+              </li>
+
+              <li class="outsidelist">
+                <a
                   href="https://coursera.org/share/19efb623e8a2c894fab4c605bf843c9b"
                   target="_blank"
                   >Technical Support Fundamentals</a
                 >
               </li>
+
               <li class="outsidelist">
                 <a
                   href="https://coursera.org/share/84c3fcb9a5a0469ce7f2a1d3359917c9"
@@ -207,6 +226,7 @@
                   >Building Web Applications in PHP</a
                 >
               </li>
+
               <li class="outsidelist">
                 <a
                   href="https://coursera.org/share/e4677e1b75a466d928799dfb35bec8b7"
@@ -214,6 +234,7 @@
                   >Building Database Applications in PHP</a
                 >
               </li>
+
               <li class="outsidelist">
                 <a
                   href="https://coursera.org/share/2c4edbd48385c0cae30343c6ccc02d74"
@@ -221,6 +242,7 @@
                   >Introduction to Structured Query Language (SQL)</a
                 >
               </li>
+
               <li class="outsidelist">
                 <a href="images/CNCTCRCE.png" target="_blank"
                   >PC Assembly, Hardware and Software Troubleshooting and
@@ -236,6 +258,7 @@
                   >Filipino Web Development Peers Community Day, July 30, 2023
                 </a>
               </li>
+
               <li class="outsidelist">
                 <a href="docfiles/RCEFCB.pdf" target="_blank"
                   >ZUITT Free Coding Bootcamp: Basic Web Development Workshop,
@@ -279,6 +302,15 @@
                 - Made this game using CIP's graphics library .
               </li>
             </ul>
+          </section>
+
+          <section class="ispsection">
+            <h3>Hello Visitor</h3>
+            <table class="isptable">
+              <tr>
+                <th>YOUR ISP DETAILS</th>
+              </tr>
+            </table>
           </section>
 
           <em><a href="#">back to HOME</a></em>

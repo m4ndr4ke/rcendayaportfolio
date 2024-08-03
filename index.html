@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rommel C. Endaya Portfolio</title>
 
-    <!--quotable quotes-->
+    <!--
     <script>
       //code thanks to Asaolu Elijah!
       const url = 'https://api.quotable.io/random';
@@ -29,6 +29,24 @@
       //setInterval(generateQuote(), 60000);
 
       generateQuote();
+    </script>
+  -->
+
+    <script type="text/javascript">
+      const api_url = 'https://api.adviceslip.com/advice';
+
+      async function getapi(url) {
+        const response = await fetch(url);
+        var data = await response.json();
+        console.log(data);
+
+        document.getElementById('quote').innerHTML =
+          '"' + data.slip.advice + '"';
+        document.getElementById('author').innerHTML =
+          'random quote generator api';
+      }
+
+      getapi(api_url);
     </script>
 
     <!--ISP details-->
@@ -109,9 +127,15 @@
 
       <nav class="mainnavibar">
         <ul class="mainnavibaritems">
-          <li class="mainnavibaritemslist">ABOUT ME</li>
-          <li class="mainnavibaritemslist">EDUCATION</li>
-          <li class="mainnavibaritemslist">PROGRAMS</li>
+          <li class="mainnavibaritemslist">
+            <a aria-current="page" href="#">ABOUT ME</a>
+          </li>
+          <li class="mainnavibaritemslist">
+            <a href="#education">EDUCATION</a>
+          </li>
+          <li class="mainnavibaritemslist">
+            <a href="#personalproj">PROGRAMS</a>
+          </li>
         </ul>
       </nav>
 
@@ -141,7 +165,7 @@
             <em><a href="#">back to HOME</a></em>
           </section>
 
-          <section class="education">
+          <section class="education" id="education">
             <h2>Education</h2>
 
             <ul class="outsideul">
@@ -225,7 +249,7 @@
         </div>
 
         <div class="projectsection">
-          <section>
+          <section id="personalproj">
             <h2>Sample Programs</h2>
             <h3>Python</h3>
             <p>
@@ -262,27 +286,27 @@
       </main>
 
       <footer class="footerclass">
-        © 2024 Copyright:
-        <a class="text-white" href="mailto:rommelsaiyan@yahoo.com"
-          >ROMMEL C. ENDAYA</a
-        ><br />
-        email: rommelsaiyan@yahoo.com
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" aria-current="page" href="#"
-              >About Me</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#personalproj"
-              >Personal Projects</a
-            >
-          </li>
-        </ul>
+        <section class="sectiononefooter">
+          © 2024
+          <a class="text-white" href="mailto:rommelsaiyan@yahoo.com"
+            >ROMMEL C. ENDAYA</a
+          >
+          <br />
+          email: rommelsaiyan@yahoo.com
+
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">ABOUT ME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">EDUCATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#personalproj">PROJECTS</a>
+            </li>
+          </ul>
+        </section>
       </footer>
     </div>
 

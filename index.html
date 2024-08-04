@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rommel C. Endaya Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/rceeyesico.ico" />
 
     <!--
     <script>
@@ -50,7 +51,7 @@
     </script>
 
     <!--ISP details-->
-    <script>
+    <script type="text/javascript">
       const apiurl = 'https://api.techniknews.net/ipgeo/';
 
       function generateispdetail() {
@@ -59,21 +60,14 @@
             return ispdata.json();
           })
           .then(function (ispdata) {
-            document.getElementById('country').innerHTML =
-              'Country: ' + ispdata.country;
-            document.getElementById('region').innerHTML =
-              'Region : ' + ispdata.regionName;
-            document.getElementById('city').innerHTML =
-              'City   : ' + ispdata.city;
-            document.getElementById('zipcode').innerHTML =
-              'Zip Code : ' + ispdata.zip;
-            document.getElementById('timezone').innerHTML =
-              'Time Zone   : ' + ispdata.timezone;
-            document.getElementById('isp').innerHTML = 'ISP   : ' + ispdata.isp;
-            document.getElementById('ipaddress').innerHTML =
-              'IP address   : ' + ispdata.ip;
-            document.getElementById('reverse').innerHTML =
-              'reverse IP   : ' + ispdata.reverse;
+            document.getElementById('country').innerHTML = ispdata.country;
+            document.getElementById('region').innerHTML = ispdata.regionName;
+            document.getElementById('city').innerHTML = ispdata.city;
+            document.getElementById('zipcode').innerHTML = ispdata.zip;
+            document.getElementById('timezone').innerHTML = ispdata.timezone;
+            document.getElementById('isp').innerHTML = ispdata.isp;
+            document.getElementById('ipaddress').innerHTML = ispdata.ip;
+            document.getElementById('reverse').innerHTML = ispdata.reverse;
           })
           .catch(function (err) {
             console.log(err);
@@ -305,10 +299,47 @@
           </section>
 
           <section class="ispsection">
-            <h3>Hello Visitor</h3>
+            <h3>API calls</h3>
+            <h4>Hello Visitor</h4>
             <table class="isptable">
               <tr>
-                <th>YOUR ISP DETAILS</th>
+                <th colspan="2">Your ISP details</th>
+              </tr>
+              <tr>
+                <td>Visits</td>
+                <td id="visits">not available</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td id="country">not available</td>
+              </tr>
+              <tr>
+                <td>Region</td>
+                <td id="region">not available</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td id="city">not available</td>
+              </tr>
+              <tr>
+                <td>Zip Code</td>
+                <td id="zipcode">not available</td>
+              </tr>
+              <tr>
+                <td>Time Zone</td>
+                <td id="timezone">not available</td>
+              </tr>
+              <tr>
+                <td>ISP</td>
+                <td id="isp">not available</td>
+              </tr>
+              <tr>
+                <td>your IP address</td>
+                <td id="ipaddress">not available</td>
+              </tr>
+              <tr>
+                <td>Reverse IP</td>
+                <td id="reverse">not available</td>
               </tr>
             </table>
           </section>
@@ -319,7 +350,7 @@
 
       <footer class="footerclass">
         <section class="sectiononefooter">
-          © 2024
+          © <span id="taonnow">2024</span>
           <a class="text-white" href="mailto:rommelsaiyan@yahoo.com"
             >ROMMEL C. ENDAYA</a
           >
@@ -342,7 +373,7 @@
       </footer>
     </div>
 
-    <script>
+    <script type="text/javascript">
       var visitCount = localStorage.getItem('page_view');
       var counterContainer = document.getElementById('visits');
 
@@ -360,6 +391,16 @@
           'You visited my page ' + visitCount + ' times.';
       }
       checkvisit();
+    </script>
+
+    <script type="text/javascript">
+      var date = new Date();
+      var year = date.getFullYear();
+
+      function gettheyear() {
+        document.getElementById('taonnow').innerHTML = year;
+      }
+      gettheyear();
     </script>
   </body>
 </html>

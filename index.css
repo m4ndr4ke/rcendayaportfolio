@@ -112,6 +112,9 @@ a:visited {
 .thename {
   margin: auto;
   text-align: center;
+
+  animation: heartBeat;
+  animation-duration: 7s;
 }
 
 .headerquote {
